@@ -26,7 +26,7 @@ public class Request {
     private LocalTime time;
     private LocalDate date;
     private RequestType reqType;
-    @ManToOne
+    @ManyToOne()
     @JoinColumn(name = "user_id")
-    private User userId;y
+    private User userId;
 }
