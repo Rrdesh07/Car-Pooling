@@ -35,6 +35,9 @@ public class UserServiceImpl implements UserService{
             userData.setPhoneNo(user.getPhoneNo());
             userData.setCars(user.getCars());
             userData.setRequests(user.getRequests());
+            userRepository.save(userData);
+            return userData;
         }
+        return null;
     }
 }
