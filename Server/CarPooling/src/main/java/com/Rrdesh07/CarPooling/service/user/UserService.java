@@ -9,4 +9,5 @@ public interface UserService {
     List<User> getUsers();
     User addUser(@RequestBody User user);
     User updateUser(Long userId,@RequestBody User user);
+    String deleteUser(Long userId);
 }
