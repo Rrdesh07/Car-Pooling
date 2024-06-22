@@ -6,6 +6,7 @@ import com.Rrdesh07.CarPooling.Repository.CarRepository;
 import com.Rrdesh07.CarPooling.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 import java.util.Optional;
@@ -33,28 +34,28 @@ public class CarServiceImpl implements CarService{
         Optional<User> user=userRepository.findById(userId);
         if(user.isPresent()){
             User userData=user.get();
+            car.setUserId(userData);
             carRepository.save(car);
-            List<Car> cars=userData.getCars();
-            cars.add(car);
-            userRepository.save(userData);
             return "car added successfully!!";
         }
         return "userId doesn't exist";
     }
 
     @Override
-    public Car updateCar(Long userId, Long carId, Car car) {
+    public Car updateCar(Long userId, Long carId, @RequestBody Car car) {
         Optional<Car> carDB=carRepository.findById(carId);
-       if(carDB.isPresent()) {
+        Optional<User> userDB=userRepository.findById(userId);
+        if(carDB.isPresent() && userDB.isPresent()) {
+         User userData=userDB.get();
          Car carData = carDB.get();
+         carData.setUserId(userData);
          carData.setName(car.getName());
          carData.setType(car.getType());
-         carData.setUserId(car.getUserId());
          carData.setNoPlate(car.getNoPlate());
          carData.setNoOfBookedSeats(car.getNoOfBookedSeats());
          carData.setTotalNoOfSeats(car.getTotalNoOfSeats());
-         carRepository.save(car);
-         return car;
+         carRepository.save(carData);
+         return carData;
        }
        return null;
     }

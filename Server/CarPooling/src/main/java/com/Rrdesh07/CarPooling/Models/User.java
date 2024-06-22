@@ -1,5 +1,6 @@
 package com.Rrdesh07.CarPooling.Models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -22,6 +23,7 @@ public class User {
     private String phoneNo;
     @OneToMany(mappedBy = "userId")
     private List<Request> requests;
+
     @OneToMany(cascade=CascadeType.ALL,mappedBy = "userId")
     private List<Car> cars;
 }
