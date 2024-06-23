@@ -1,6 +1,7 @@
 package com.Rrdesh07.CarPooling.Models;
 
 import com.Rrdesh07.CarPooling.Enum.RequestType;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -23,9 +24,10 @@ public class Request {
     private Long seatsBooked;
     private Long totalCost;
     private Long userCost;
-    private LocalTime time;
-    private LocalDate date;
+    private String time;
+    private String date;
     private RequestType reqType;
+    @JsonIgnore
     @ManyToOne()
     @JoinColumn(name = "user_id")
     private User userId;
