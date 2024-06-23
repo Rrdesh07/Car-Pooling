@@ -11,7 +11,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { SearchComponent } from './components/search/search.component';
 import { AllRequestsComponent } from './components/all-requests/all-requests.component';
-import { PasengerRequestsComponent } from './component/pasenger-requests/pasenger-requests.component';
+import { PasengerRequestsComponent } from './components/pasenger-requests/pasenger-requests.component';
 
 @NgModule({
   declarations: [
