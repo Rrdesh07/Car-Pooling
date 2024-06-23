@@ -1,0 +1,10 @@
+<section class="all-requests">
+    <div class="request" *ngFor="let request of requests">
+        <!-- car-details also should shown here  -->
+        <p>{{request.source}}</p>
+        <p>{{request.destination}}</p>
+        <p>{{request.totalCost}}</p>
+        <p>{{request.userCost}}</p>
+        <p>{{request.seatsBooked}}</p>
+    </div>
+</section>
