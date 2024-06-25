@@ -4,7 +4,7 @@ main{
     align-items: center;
     justify-content: center;
 }
-.login-form{
+.signup-form{
     width: 28vw;
     height: 60vh;
     border: 2px solid red;
