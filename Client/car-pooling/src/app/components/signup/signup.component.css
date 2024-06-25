@@ -1,0 +1,41 @@
+main{
+    height: 80vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-form{
+    width: 28vw;
+    height: 60vh;
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+}
+label{
+    display: block;
+    margin-bottom: 0.3rem;
+}
+.formDetails{
+    width: 70%;
+}
+select{
+    width: 50%;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom:1.5rem;
+}
+.button-design{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+button{
+    width: 100%;
+}
