@@ -9,4 +9,8 @@ export class SignupComponent {
   email:string='';
   password:string='';
   phoneNo:string='';
+
+  onSubmit(){
+    console.log(`Name:${this.name} Email:${this.email} Password:${this.password} PhoneNo:${this.phoneNo}`)
+  }
 }
