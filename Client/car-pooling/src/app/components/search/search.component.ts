@@ -10,4 +10,8 @@ export class SearchComponent {
   destination:string='';
   time:string='';
   date:string='';
+
+  onSearch(){
+    console.log(`Source : ${this.source} Destination: ${this.destination} Time: ${this.time} Date: ${this.date}`)
+  }
 }

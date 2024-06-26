@@ -1,11 +1,26 @@
 <main>
-    <section class="search">
-        <form>
-            <input type="text" name="source" placeholder="Enter your source..." [(ngModel)]="source">
-            <input type="text" name="destination" placeholder="Enter your placeholder..." [(ngModel)]="destination">
-            <input type="text" name="time" placeholder="Enter your time..." [(ngModel)]="time">
-            <input type="text" name="date" placeholder="Enter your date..." [(ngModel)]="date">
-            <button>search</button>
+    <section class="search-form">
+        <h1>Search Your ride</h1>
+        <form (ngSubmit)="onSearch()" class="searchDetails">
+            <div class="form-group">
+                <label for="source">Source:</label>
+                <input type="text" name="source" placeholder="Enter your source..." [(ngModel)]="source">
+            </div>
+            <div class="form-group">
+                <label for="source">Destination:</label>
+                <input type="text" name="destination" placeholder="Enter your placeholder..." [(ngModel)]="destination">
+            </div>
+            <div class="form-group">
+                <label for="source">Time:</label>
+                <input type="text" name="time" placeholder="Enter your time..." [(ngModel)]="time">
+            </div>
+           <div class="form-group">
+                <label for="source">Date:</label>
+                <input type="text" name="date" placeholder="Enter your date..." [(ngModel)]="date">
+           </div>
+            <div class="button-design">
+                <button type="submit">search</button>
+            </div>
         </form>
     </section>
 </main>
