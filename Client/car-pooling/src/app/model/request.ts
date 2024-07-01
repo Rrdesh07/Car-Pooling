@@ -1,3 +1,6 @@
+import { Car } from "./car";
+import { User } from "./user";
+
 export class Request {
     source:string='';
     destination:string='';
@@ -7,4 +10,6 @@ export class Request {
     time:string='';
     date:string='';
     reqType:string='';
+    user:User={name:'',email:'',password:'',phoneNo:''};
+    car:Car={name:'',totalNoOfSeats:'',noOfBookedSeats:'',noPlate:'',type:''}
 }

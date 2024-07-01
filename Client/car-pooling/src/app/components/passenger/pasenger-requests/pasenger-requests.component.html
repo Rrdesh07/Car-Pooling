@@ -1,0 +1,17 @@
+<main>
+    <section>
+        <h1> My requests</h1>
+        <div class="request" *ngFor="let request of requests">
+            <p>{{request.source}}</p>
+            <p>{{request.destination}}</p>
+            <p>{{request.seatsBooked}}</p>
+            <p>{{request.date}}</p>
+            <p>{{request.time}}</p>
+            <p>{{request.car.name}}</p>
+            <p>{{request.car.noPlate}}</p>
+            <p>{{request.car.type}}</p>
+            <p>{{request.userCost}}</p>
+            <p>{{request.totalCost}}</p>
+        </div>
+    </section>
+</main>

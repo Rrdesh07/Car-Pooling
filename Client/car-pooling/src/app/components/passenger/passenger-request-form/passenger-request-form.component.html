@@ -1,0 +1,60 @@
+<main>
+    <section>
+        <h1>Passenger request</h1>
+        <form (ngSubmit)="handlePassengerRequest()">
+            <div class="form-group">
+                <label for="passengerName">Passenger Name:</label>
+                <input type="text" name="passengerName" placeholder="Enter your name.." [(ngModel)]="passengerName" >
+            </div>
+            <div class="form-group">
+                <label for="passengerPhoneNo">Passenger PhoneNo:</label>
+                <input type="text" name="passengerPhoneNo" placeholder="Enter your PhoneNo.." [(ngModel)]="passengerPhoneNo" >
+            </div>
+            <div class="form-group">
+                <label for="source">Source</label>
+                <input type="text" name="source" placeholder="Enter your source point.." [(ngModel)]="source" >
+            </div>
+            <div class="form-group">
+                <label for="destination">Destination point:</label>
+                <input type="text" name="destination" placeholder="Enter your destination point.." [(ngModel)]="destination" >
+            </div>
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="text" name="date" placeholder="Enter the date...." [(ngModel)]="date" >
+            </div>
+            <div class="form-group">
+                <label for="time">Time:</label>
+                <input type="text" name="time" placeholder="Enter the time" [(ngModel)]="time" >
+            </div>
+            <div class="form-group">
+                <label for="carName">Car:</label>
+                <input type="text" name="carName" placeholder="Enter your car Model.." [(ngModel)]="carName" >
+            </div>
+            <div class="form-group">
+                <label for="noPlate">Passenger Name:</label>
+                <input type="text" name="noPlate" placeholder="Enter the car NoPlate.." [(ngModel)]="noPlate" >
+            </div>
+            <div class="form-group">
+                <label for="carType">Passenger Name:</label>
+                <input type="text" name="carType" placeholder="Enter the car type.." [(ngModel)]="carType" >
+            </div>
+            <div class="form-group">
+                <label for="carUserName">Passenger Name:</label>
+                <input type="text" name="carUserName" placeholder="Enter Car User name..." [(ngModel)]="carUserName" >
+            </div>
+            <div class="form-group">
+                <label for="carUserPhoneNo">Passenger Name:</label>
+                <input type="text" name="carUserPhoneNo" placeholder="Enter Car User PhoneNo..." [(ngModel)]="carUserPhoneNo" >
+            </div>
+            <div class="form-group">
+                <label for="passengerNoOfSeats">Passenger Name:</label>
+                <input type="number" name="passengerNoOfSeats" placeholder="Enter no of seats you required..." [(ngModel)]="passengerNoOfSeats" >
+            </div>
+            <div class="form-group">
+                <label for="perUserCost">Passenger Name:</label>
+                <input type="number" name="perUserCost" placeholder="Per User cost...." [(ngModel)]="perUserCost" >
+            </div>
+            <button type="submit">Book a ride</button>
+        </form>
+    </section>
+</main>
